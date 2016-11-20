@@ -21,7 +21,7 @@ public final class R {
         public static final int acc_x=0x7f080009;
         public static final int acc_y=0x7f08000a;
         public static final int acc_z=0x7f08000b;
-        public static final int action_settings=0x7f08001a;
+        public static final int action_settings=0x7f080027;
         public static final int alpha1=0x7f08000c;
         public static final int alpha2=0x7f08000d;
         public static final int alpha3=0x7f08000e;
@@ -30,24 +30,40 @@ public final class R {
         public static final int beta2=0x7f080011;
         public static final int beta3=0x7f080012;
         public static final int beta4=0x7f080013;
+        public static final int com_spotify_sdk_login_webview=0x7f08001b;
+        public static final int com_spotify_sdk_login_webview_container=0x7f08001a;
         public static final int con_status=0x7f080004;
         public static final int connect=0x7f080002;
+        public static final int createSessionbtn=0x7f080025;
         public static final int disconnect=0x7f080003;
         public static final int eeg_af7=0x7f080006;
         public static final int eeg_af8=0x7f080007;
         public static final int eeg_tp10=0x7f080008;
         public static final int eeg_tp9=0x7f080005;
         public static final int muses_spinner=0x7f080000;
+        public static final int numCycles=0x7f080024;
+        public static final int numCyclestxt=0x7f080023;
         public static final int pause=0x7f080019;
         public static final int refresh=0x7f080001;
+        public static final int resetbtn=0x7f080026;
+        public static final int restLength=0x7f080020;
+        public static final int restLengthtxt=0x7f08001f;
+        public static final int sessionName=0x7f08001e;
+        public static final int sessionNametxt=0x7f08001d;
+        public static final int subtitle=0x7f08001c;
         public static final int theta1=0x7f080014;
         public static final int theta2=0x7f080015;
         public static final int theta3=0x7f080016;
         public static final int theta4=0x7f080017;
         public static final int version=0x7f080018;
+        public static final int workLength=0x7f080022;
+        public static final int workLengthtxt=0x7f080021;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int com_spotify_sdk_login_activity=0x7f030001;
+        public static final int com_spotify_sdk_login_dialog=0x7f030002;
+        public static final int new_session=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -59,22 +75,23 @@ public final class R {
         public static final int app_name=0x7f060003;
         public static final int artifacts=0x7f060004;
         public static final int beta_elem=0x7f060005;
-        public static final int connect=0x7f060006;
-        public static final int disconnect=0x7f060007;
-        public static final int drop=0x7f060008;
-        public static final int eeg=0x7f060009;
-        public static final int hello_world=0x7f06000a;
-        public static final int init_val=0x7f06000b;
-        public static final int msg_count=0x7f06000c;
-        public static final int pause=0x7f06000d;
-        public static final int permission_dialog_description=0x7f06000e;
-        public static final int permission_dialog_title=0x7f06000f;
-        public static final int permission_dialog_understand=0x7f060010;
-        public static final int refresh=0x7f060011;
-        public static final int status=0x7f060012;
-        public static final int theta_elem=0x7f060013;
-        public static final int undefined=0x7f060014;
-        public static final int version=0x7f060015;
+        public static final int com_spotify_sdk_login_progress=0x7f060006;
+        public static final int connect=0x7f060007;
+        public static final int disconnect=0x7f060008;
+        public static final int drop=0x7f060009;
+        public static final int eeg=0x7f06000a;
+        public static final int hello_world=0x7f06000b;
+        public static final int init_val=0x7f06000c;
+        public static final int msg_count=0x7f06000d;
+        public static final int pause=0x7f06000e;
+        public static final int permission_dialog_description=0x7f06000f;
+        public static final int permission_dialog_title=0x7f060010;
+        public static final int permission_dialog_understand=0x7f060011;
+        public static final int refresh=0x7f060012;
+        public static final int status=0x7f060013;
+        public static final int theta_elem=0x7f060014;
+        public static final int undefined=0x7f060015;
+        public static final int version=0x7f060016;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

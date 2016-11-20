@@ -10,5 +10,9 @@
     {
         "merged": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]

@@ -2,103 +2,67 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\exploded-aar\com.spotify.sdk\spotify-player-1.0.0-beta13\jars\libs\jnihelpers-1.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="583ae3df286bda818cc01533a0e8ac1d023c0552">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0415c90464002c73c2f0db3aa2fbda8f6dbe4537\classes.dex" />
+        sha1="28a7909f288b4320727832637998733eefd61951">
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\jnihelpers-1.0_48bda3a14c8c058bd50efee352e355bf315e5e41.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_9f97600b03ad58199957e5a51f98b25890bd122c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\musiq\MusIQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\User\musiq\MusIQ\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_b297890bf5197213328cddd76e929f82cfcb3a94\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\musiq\MusIQ\app\libs\libmuse_android.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\libs\libmuse_android.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="e0e7a9483598120cec51b3d74f2dc23ee5981588">
-        <dex dex="C:\Users\User\musiq\MusIQ\app\build\intermediates\transforms\dex\debug\folders\1000\2\libmuse_android_abad06e498eb2ce1676def76cdb3e7034437c878\classes.dex" />
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\libmuse_android_4635dedaa2ffbd7bede69021c7fc89aa57c36ef9.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\exploded-aar\com.spotify.sdk\spotify-auth-1.0.0-beta13\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_5f9b609e4bbd04cba27955e3f5433a012941a0ca\classes.dex" />
+        sha1="43b85c5b5849249a42ce6f10a88b781393772304">
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\exploded-aar-com.spotify.sdk-spotify-auth-1.0.0-beta13_c8b8eb0ae0b1faf80599dbd6d5d7edaebcd1d31c.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_c765b91701bf820dd72845794a8342fed4da47d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\exploded-aar\com.spotify.sdk\spotify-player-1.0.0-beta13\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="19768ada4db6114386bb7ea58397601260f6b2ed">
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\exploded-aar-com.spotify.sdk-spotify-player-1.0.0-beta13_1afea4604de4870ad380024218644ee17f3c1f08.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\aldamaria\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_3e801f2c585276f3f273a9825aabeda71442f872\classes.dex" />
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_65b45cec5394668d67968791f32abedf1be9bc21.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\User\musiq\MusIQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\User\musiq\MusIQ\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_11cce48a67a742f0a9ea3efe833d11d387471643\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\libs\libmuse_android.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e0e7a9483598120cec51b3d74f2dc23ee5981588">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\2\libmuse_android_624cfbdb2ebc230c689b70055fece464999073f7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\musiq\MusIQ\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="3c4e4bf83ad3ee2595f901d4b46aec674e6f228d">
-        <dex dex="C:\Users\User\musiq\MusIQ\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_808d1dd9dc6a90edf38fd14fbfdc15f4e9cd9a7d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\musiq\MusIQ\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c846e633a72ae057bb821cc7a949b508e86a2d1a">
-        <dex dex="C:\Users\User\musiq\MusIQ\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_114e6eefddce806adddb44dca54bad913474ea75\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="3ac5f6f498a45664b3390af25447b44c1883c470">
-        <dex dex="C:\Users\User\libmuse_5.13.0\android\examples\TestLibMuseAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7f210c7b501a31afc3fc4d42c40960e4975909f2\classes.dex" />
+        <dex dex="C:\Users\aldamaria\Desktop\projectMusiq\musiq\MusIQ\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_5567b2825e0891201a1785e100df260b82e0efd8.jar" />
     </item>
 
 </items>

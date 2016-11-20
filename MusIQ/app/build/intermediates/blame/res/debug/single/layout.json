@@ -1,7 +1,23 @@
 [
     {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_dialog.xml",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\exploded-aar\\com.spotify.sdk\\spotify-auth-1.0.0-beta13\\res\\layout\\com_spotify_sdk_login_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_spotify_sdk_login_activity.xml",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\exploded-aar\\com.spotify.sdk\\spotify-auth-1.0.0-beta13\\res\\layout\\com_spotify_sdk_login_activity.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\libmuse_5.13.0\\android\\examples\\TestLibMuseAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\Users\\User\\libmuse_5.13.0\\android\\examples\\TestLibMuseAndroid\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\layout\\new_session.xml",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\src\\main\\res\\layout\\new_session.xml"
     },
     {
         "merged": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",

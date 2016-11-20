@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     },

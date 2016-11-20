@@ -8,6 +8,10 @@
         "source": "C:\\Users\\User\\musiq\\TestLibMuseAndroid\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\aldamaria\\Desktop\\projectMusiq\\musiq\\MusIQ\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\User\\musiq\\MusIQ\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
         "source": "C:\\Users\\User\\musiq\\MusIQ\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     }
