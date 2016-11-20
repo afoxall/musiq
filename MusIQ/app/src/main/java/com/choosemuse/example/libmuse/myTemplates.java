@@ -3,11 +3,13 @@ package com.choosemuse.example.libmuse;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileReader;
 import java.io.InputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import android.content.Context;
@@ -48,4 +50,19 @@ public class myTemplates {
         }
         return null;
     }
+/*
+    static void deleteTemplate(String tName, Context ctx) throws IOException{
+        ArrayList<WorkSessionTemplate> templates = myTemplates.getTemplates(ctx);
+
+        File dir = ctx.getFilesDir(); // get app directory
+        String path = dir.getAbsolutePath() + "session_templates.ser";
+        FileOutputStream stream = new FileOutputStream(path, false);
+        ObjectOutputStream objStream = new ObjectOutputStream(stream);
+
+        for(WorkSessionTemplate template:templates){
+            if(!template.getName().equals(tName)){
+                objStream.writeObject(template);
+            }
+        }
+    }*/
 }
