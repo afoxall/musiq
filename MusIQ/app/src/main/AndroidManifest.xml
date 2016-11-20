@@ -32,9 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SessionHistory"
-            android:label="@string/title_activity_session_history"></activity>
     </application>
 
 </manifest>

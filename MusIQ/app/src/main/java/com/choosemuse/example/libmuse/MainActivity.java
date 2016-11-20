@@ -521,26 +521,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         private final Runnable tickUi = new Runnable() {
         @Override
         public void run() {
-            /*if (eegStale) {
-                updateEeg();
-                eegStale = false;
-            }
-            if (accelStale) {
-                updateAccel();
-                accelStale = false;
-            }
-            if (alphaStale) {
-                updateAlpha();
-                alphaStale = false;
-            }
-            if (betaStale) {
-                updateBeta();
-                betaStale = false;
-            }
-            if (thetaStale) {
-                updateTheta();
-                thetaStale = false;
-            }*/
+
             session.update();
             handler.postDelayed(tickUi, 1000 / 60);
         }

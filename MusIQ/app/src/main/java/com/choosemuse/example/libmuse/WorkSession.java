@@ -44,8 +44,8 @@ public class WorkSession {
     public boolean alphaStale;
     private final double[] betaBuffer = new double[6];
     public boolean betaStale;
-    private final double[] thetaBuffer = new double[6];
-    public boolean thetaStale;
+    private final double[] gammaBuffer = new double[6];
+    public boolean gammaStale;
 
     private final double[] accelBuffer = new double[3];
     private boolean accelStale;
@@ -93,10 +93,10 @@ public class WorkSession {
                 getEegChannelValues(betaBuffer,p);
                 betaStale = true;
                 break;
-            case THETA_ABSOLUTE:
-                assert(thetaBuffer.length >= n);
-                getEegChannelValues(thetaBuffer,p);
-                thetaStale = true;
+            case GAMMA_ABSOLUTE:
+                assert(gammaBuffer.length >= n);
+                getEegChannelValues(gammaBuffer,p);
+                gammaStale = true;
                 break;
 
             case BATTERY:
@@ -131,7 +131,7 @@ public class WorkSession {
     }
 
     public void update(Context ctx) {
-        DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(thetaBuffer, 4));
+        DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(gammaBuffer, 4));
         data.add(p);
 
         if(p.isFocused()){
