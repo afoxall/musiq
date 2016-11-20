@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:textSize="16sp"
+        android:text="New Session"
+        android:gravity="center"
+        android:id="@+id/subtitle"
+android:layout_weight="0.25" />
+
+    <TextView
+		android:layout_width="match_parent"
+		android:layout_height="31dp"
+		android:textSize="16sp"
+		android:text="Name:"
+		android:id="@+id/sessionNametxt"
+		android:layout_weight="0.17" />
+
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:inputType="text"
+        android:ems="10"
+		android:id="@+id/sessionName" />/>
+
+
+
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="34dp"
+		android:textSize="16sp"
+		android:text="Rest Length:"
+		android:id="@+id/restLengthtxt"
+		android:layout_weight="0.22" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/restLength" />
+
+    <TextView
+		android:layout_width="match_parent"
+		android:layout_height="36dp"
+		android:textSize="16sp"
+		android:id="@+id/workLengthtxt"
+		android:text="Work Length:"
+        android:layout_weight="0.17" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/workLength" />
+
+    <TextView
+		android:id="@+id/numCyclestxt"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:textSize="16sp"
+		android:text="Number Of Cycles:"
+        android:layout_weight="0.09" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/numCycles" />
+
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:orientation="horizontal" >
+
+		<Button
+			android:layout_marginLeft="20dp"
+			android:id="@+id/createSessionbtn"
+			android:layout_width="150dp"
+			android:layout_height="40dp"
+			android:text="Create Session" />
+
+		<Button
+			android:layout_marginLeft="20dp"
+			android:id="@+id/resetbtn"
+			android:layout_width="match_parent"
+			android:layout_height="40dp"
+			android:text="Reset" />
+	</LinearLayout>
+
+</LinearLayout>
