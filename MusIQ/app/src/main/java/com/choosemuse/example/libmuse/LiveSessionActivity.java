@@ -1,5 +1,6 @@
 package com.choosemuse.example.libmuse;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import com.choosemuse.libmuse.MuseVersion;
 import java.lang.ref.WeakReference;
 import java.util.List;
 
+
 /** Ameris Rudland
  * musIQ
  * created @ The Lady Hacks
@@ -35,11 +37,7 @@ import java.util.List;
  *
  * LiveSessionActivity occurs when a new session is started. It must
  *  - read incoming muse data
- *  - display data in a pretty graph form - lol maybe not
- *  - change music depending on time/mood in the session
- *  - save data from the session
- */
-
+*/
 public class LiveSessionActivity extends Activity implements View.OnClickListener {
     /**
      * Tag used for logging purposes.
@@ -107,6 +105,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
     private WorkSession liveSession;
     private int progressPercent;
+
 
     @Override
     protected void onDestroy() {
@@ -219,12 +218,12 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
     private void updateScreen(){
         //do stuff to update the data on screen
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
         liveSession.start();     // start the session
     }
 
@@ -349,3 +348,4 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         }
     }
 }
+
