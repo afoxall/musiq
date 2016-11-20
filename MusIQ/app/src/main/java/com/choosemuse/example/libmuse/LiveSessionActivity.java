@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.choosemuse.example.libmuse;
 
 import android.content.Context;

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import android.content.Context;
 import android.app.AlertDialog;
+import android.media.MediaPlayer;
+
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.Eeg;
 import com.choosemuse.libmuse.MuseDataPacket;
@@ -22,7 +24,9 @@ public class WorkSession {
     private Date endTime;
     private int roundsLeft;
     private ArrayList<DataPoint> data;
+    private MediaPlayer mp;
     boolean working;
+    Context context;
 
 
     /**
@@ -44,8 +48,8 @@ public class WorkSession {
     public boolean alphaStale;
     private final double[] betaBuffer = new double[6];
     public boolean betaStale;
-    private final double[] thetaBuffer = new double[6];
-    public boolean thetaStale;
+    private final double[] gammaBuffer = new double[6];
+    public boolean gammaStale;
 
     private final double[] accelBuffer = new double[3];
     private boolean accelStale;
@@ -57,7 +61,7 @@ public class WorkSession {
     }
 
     public WorkSession(String t, String start, ArrayList<DataPoint> d, Context ctx) throws IOException{
-
+        context = ctx;
         template = myTemplates.getTemplate(t, ctx);
         try {
             startTime = sdf.parse(start);
@@ -93,10 +97,10 @@ public class WorkSession {
                 getEegChannelValues(betaBuffer,p);
                 betaStale = true;
                 break;
-            case THETA_ABSOLUTE:
-                assert(thetaBuffer.length >= n);
-                getEegChannelValues(thetaBuffer,p);
-                thetaStale = true;
+            case GAMMA_ABSOLUTE:
+                assert(gammaBuffer.length >= n);
+                getEegChannelValues(gammaBuffer,p);
+                gammaStale = true;
                 break;
 
             case BATTERY:
@@ -130,8 +134,8 @@ public class WorkSession {
         working = true;
     }
 
-    public void update(Context ctx) {
-        DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(thetaBuffer, 4));
+    public void update() {
+        DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(gammaBuffer, 4));
         data.add(p);
 
         if(p.isFocused()){
@@ -145,20 +149,34 @@ public class WorkSession {
             //change music, tell user they are on a break
             if(working) {
                 //change music to relaxing
+                stopPlaying();
+                mp = MediaPlayer.create(context, R.raw.dance);
+                mp.start();
                 working = false;
                 timeLeft = template.getRest();
                 roundsLeft--;
             }
             else{
                 //change music to focus
+                stopPlaying();
+                mp = MediaPlayer.create(context, R.raw.study);
+                mp.start();
                 working = true;
                 timeLeft = template.getWork();
             }
         }
         if(roundsLeft < 1){
             endTime = new Date();
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ctx);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
             alertDialogBuilder.setMessage("Your session is complete! Review your results then go back to the main page to start another.");
+        }
+    }
+
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
         }
     }
 

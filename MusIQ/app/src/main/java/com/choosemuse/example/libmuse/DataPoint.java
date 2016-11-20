@@ -7,16 +7,16 @@ package com.choosemuse.example.libmuse;
 public class DataPoint {
     double beta;
     double alpha;
-    double theta;
+    double gamma;
 
-    public DataPoint(double a, double b, double t){
+    public DataPoint(double a, double b, double g){
         alpha = a;
         beta  = b;
-        theta = t;
+        gamma = g;
     }
 
     public String toString(){
-        return alpha + "," + beta + "," + theta + "\n";
+        return alpha + "," + beta + "," + gamma + "\n";
     }
 
     public boolean isFocused(){
