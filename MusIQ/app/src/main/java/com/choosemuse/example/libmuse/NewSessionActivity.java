@@ -24,14 +24,15 @@ public class NewSessionActivity extends Activity{
     Button btnReset;
     Button btnCreateSession;
 
-    EditText n = (EditText)findViewById(R.id.sessionName);
-    String name= n.getText().toString();
-    EditText rest = (EditText) findViewById(R.id.restLength) ;
-    int restValue = Integer.parseInt( rest.getText().toString() );
-    EditText work = (EditText) findViewById(R.id.workLength) ;
-    int workValue = Integer.parseInt( work.getText().toString() );
-    EditText numC = (EditText) findViewById(R.id.numCycles) ;
-    final int numCValue = Integer.parseInt( numC.getText().toString() );
+    EditText n;
+    String name;
+    EditText rest;
+    int restValue;
+    EditText work;
+    int workValue;
+    EditText numC;
+    int numCValue;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,15 @@ public class NewSessionActivity extends Activity{
 
         btnReset = (Button)findViewById(R.id.resetbtn);
         btnCreateSession = (Button)findViewById(R.id.createSessionbtn);
+        
+        n = (EditText)findViewById(R.id.sessionName);
+        name= n.getText().toString();
+        rest = (EditText) findViewById(R.id.restLength) ;
+        restValue = Integer.parseInt( rest.getText().toString());
+        work = (EditText) findViewById(R.id.workLength) ;
+        workValue = Integer.parseInt( work.getText().toString());
+        numC = (EditText) findViewById(R.id.numCycles) ;
+        numCValue = Integer.parseInt( numC.getText().toString());
 
 
         btnReset.setOnClickListener(new View.OnClickListener() {
