@@ -1,4 +1,4 @@
-package com.musiq;
+package com.choosemuse.example.libmuse;
 
 /**
  * Example of using libmuse library on android.
@@ -10,11 +10,13 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 
 import java.util.concurrent.atomic.AtomicReference;
-import com.musiq.R;
+
+
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.AnnotationData;
 import com.choosemuse.libmuse.ConnectionState;
 import com.choosemuse.libmuse.Eeg;
+import com.choosemuse.libmuse.LogManager;
 import com.choosemuse.libmuse.LibmuseVersion;
 import com.choosemuse.libmuse.MessageType;
 import com.choosemuse.libmuse.Muse;
@@ -518,18 +520,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
         public void run() {
             if (eegStale) {
                 updateEeg();
+                eegStale = false;
             }
             if (accelStale) {
                 updateAccel();
+                accelStale = false;
             }
             if (alphaStale) {
                 updateAlpha();
+                alphaStale = false;
             }
             if (betaStale) {
                 updateBeta();
+                betaStale = false;
             }
             if (thetaStale) {
                 updateTheta();
+                thetaStale = false;
             }
             handler.postDelayed(tickUi, 1000 / 60);
         }

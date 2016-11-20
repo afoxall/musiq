@@ -1,0 +1,7 @@
+#Sat Nov 19 20:05:43 EST 2016
+base.0=C\:\\Users\\User\\musiq\\MusIQ\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_114e6eefddce806adddb44dca54bad913474ea75
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\User\\musiq\\MusIQ\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_808d1dd9dc6a90edf38fd14fbfdc15f4e9cd9a7d\\classes.dex
+base.1=C\:\\Users\\User\\musiq\\MusIQ\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_808d1dd9dc6a90edf38fd14fbfdc15f4e9cd9a7d
+file.0=C\:\\Users\\User\\musiq\\MusIQ\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_114e6eefddce806adddb44dca54bad913474ea75\\classes.dex

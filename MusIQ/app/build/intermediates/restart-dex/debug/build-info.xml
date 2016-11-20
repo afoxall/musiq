@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="171254501761936"
+    token="1380754611742621478"
+    verifier="JAVA_RESOURCES_CHANGED" >
+
+    <task
+        name="javac"
+        duration="1484" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="504" />
+    <task
+        name="verifier"
+        duration="161" />
+
+    <artifact
+        location="C:\Users\User\musiq\MusIQ\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="171254501761936"
+        verifier="JAVA_RESOURCES_CHANGED" >
+        <artifact
+            location="C:\Users\User\musiq\MusIQ\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
