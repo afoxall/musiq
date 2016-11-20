@@ -1507,5 +1507,527 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 53,
+                    "endOffset": 218
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 493,
+                        "endColumn": 53,
+                        "endOffset": 542
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 223,
+                    "endColumn": 52,
+                    "endOffset": 271
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 165,
+                        "endColumn": 52,
+                        "endOffset": 213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 276,
+                    "endColumn": 45,
+                    "endOffset": 317
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 832,
+                        "endColumn": 45,
+                        "endOffset": 873
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 322,
+                    "endColumn": 55,
+                    "endOffset": 373
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 55,
+                        "endOffset": 107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 378,
+                    "endColumn": 51,
+                    "endOffset": 425
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 638,
+                        "endColumn": 51,
+                        "endOffset": 685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 430,
+                    "endColumn": 43,
+                    "endOffset": 469
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 878,
+                        "endColumn": 43,
+                        "endOffset": 917
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 474,
+                    "endColumn": 67,
+                    "endOffset": 537
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\build\\intermediates\\exploded-aar\\com.spotify.sdk\\spotify-auth-1.0.0-beta13\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 194,
+                        "endColumn": 67,
+                        "endOffset": 257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 542,
+                    "endColumn": 43,
+                    "endOffset": 581
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 218,
+                        "endColumn": 43,
+                        "endOffset": 257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 586,
+                    "endColumn": 49,
+                    "endOffset": 631
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 316,
+                        "endColumn": 49,
+                        "endOffset": 361
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 636,
+                    "endColumn": 37,
+                    "endOffset": 669
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 794,
+                        "endColumn": 37,
+                        "endOffset": 827
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 674,
+                    "endColumn": 41,
+                    "endOffset": 711
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 451,
+                        "endColumn": 41,
+                        "endOffset": 488
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 716,
+                    "endColumn": 52,
+                    "endOffset": 764
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 52,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 769,
+                    "endColumn": 40,
+                    "endOffset": 805
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 410,
+                        "endColumn": 40,
+                        "endOffset": 446
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 810,
+                    "endColumn": 56,
+                    "endOffset": 862
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 690,
+                        "endColumn": 56,
+                        "endOffset": 742
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 867,
+                    "endColumn": 46,
+                    "endOffset": 909
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 747,
+                        "endColumn": 46,
+                        "endOffset": 789
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 914,
+                    "endColumn": 241,
+                    "endOffset": 1151
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1048,
+                        "endColumn": 241,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1156,
+                    "endColumn": 78,
+                    "endOffset": 1230
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 969,
+                        "endColumn": 78,
+                        "endOffset": 1043
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1235,
+                    "endColumn": 69,
+                    "endOffset": 1300
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1290,
+                        "endColumn": 69,
+                        "endOffset": 1355
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1305,
+                    "endColumn": 43,
+                    "endOffset": 1344
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 366,
+                        "endColumn": 43,
+                        "endOffset": 405
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1349,
+                    "endColumn": 53,
+                    "endOffset": 1398
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 262,
+                        "endColumn": 53,
+                        "endOffset": 311
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1403,
+                    "endColumn": 45,
+                    "endOffset": 1444
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 922,
+                        "endColumn": 45,
+                        "endOffset": 963
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1449,
+                    "endColumn": 45,
+                    "endOffset": 1490
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 592,
+                        "endColumn": 45,
+                        "endOffset": 633
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1495,
+                    "endColumn": 44,
+                    "endOffset": 1535
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 547,
+                        "endColumn": 44,
+                        "endOffset": 587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1540,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1826
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1831,
+                    "endLine": 36,
+                    "endColumn": 12,
+                    "endOffset": 1986
+                },
+                "from": {
+                    "file": "C:\\Users\\Owner\\Documents\\Fourth year\\ladyhacks\\musiq\\MusIQ\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            }
+        ]
     }
 ]
