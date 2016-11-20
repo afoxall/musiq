@@ -82,7 +82,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     /**
      * Tag used for logging purposes.
      */
-    private final String TAG = "TestLibMuseAndroid";
+    private final String TAG = "MusIQ";
 
     /**
      * The MuseManager is how you detect Muse headbands and receive notifications
@@ -96,6 +96,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * configuration and version information.
      */
     private Muse muse;
+
+    private WorkSession session;
 
     /**
      * The ConnectionListener will be notified whenever there is a change in
@@ -128,7 +130,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * Note: the array lengths of the buffers are taken from the comments in
      * MuseDataPacketType, which specify 3 values for accelerometer and 6
      * values for EEG and EEG-derived packets.
-     */
+
     private final double[] eegBuffer = new double[6];
     private boolean eegStale;
     private final double[] alphaBuffer = new double[6];
@@ -136,10 +138,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private final double[] betaBuffer = new double[6];
     private boolean betaStale;
     private final double[] thetaBuffer = new double[6];
-    private boolean thetaStale;
+    private boolean thetaStale;*/
 
-    private final double[] accelBuffer = new double[3];
-    private boolean accelStale;
+//    private final double[] accelBuffer = new double[3];
+//    private boolean accelStale;
 
     /**
      * We will be updating the UI using a handler instead of in packet handlers because
@@ -407,15 +409,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * a single listener for all packet types as we have done here.
      * @param p     The data packet containing the data from the headband (eg. EEG data)
      * @param muse  The headband that sent the information.
-     */
+    */
     public void receiveMuseDataPacket(final MuseDataPacket p, final Muse muse) {
         writeDataPacketToFile(p);
 
-        // valuesSize returns the number of data values contained in the packet.
-        final long n = p.valuesSize();
-        switch (p.packetType()) {
+
+
+        session.setBuffers(p);
+        /*switch (p.packetType()) {
             case EEG:
-                assert(eegBuffer.length >= n);
+                assert(session.eegBuffer.length >= n);
                 getEegChannelValues(eegBuffer,p);
                 eegStale = true;
                 break;
@@ -445,7 +448,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case QUANTIZATION:
             default:
                 break;
-        }
+        }*/
     }
 
     /**
@@ -468,7 +471,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * Specific packet types like ACCELEROMETER, GYRO, BATTERY and DRL_REF have their own
      * getValue methods.
      */
-    private void getEegChannelValues(double[] buffer, MuseDataPacket p) {
+/*    private void getEegChannelValues(double[] buffer, MuseDataPacket p) {
         buffer[0] = p.getEegChannelValue(Eeg.EEG1);
         buffer[1] = p.getEegChannelValue(Eeg.EEG2);
         buffer[2] = p.getEegChannelValue(Eeg.EEG3);
@@ -483,7 +486,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         accelBuffer[2] = p.getAccelerometerValue(Accelerometer.Z);
     }
 
-
+*/
     //--------------------------------------
     // UI Specific methods
 
@@ -514,11 +517,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * -- and it only makes sense to update the UI at about 60fps. The update
      * functions do some string allocation, so this reduces our memory
      * footprint and makes GC pauses less frequent/noticeable.
-     */
-    private final Runnable tickUi = new Runnable() {
+     * */
+        private final Runnable tickUi = new Runnable() {
         @Override
         public void run() {
-            if (eegStale) {
+            /*if (eegStale) {
                 updateEeg();
                 eegStale = false;
             }
@@ -537,7 +540,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             if (thetaStale) {
                 updateTheta();
                 thetaStale = false;
-            }
+            }*/
+            session.update();
             handler.postDelayed(tickUi, 1000 / 60);
         }
     };
@@ -546,7 +550,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * The following methods update the TextViews in the UI with the data
      * from the buffers.
      */
-    private void updateAccel() {
+    /*private void updateAccel() {
         TextView acc_x = (TextView)findViewById(R.id.acc_x);
         TextView acc_y = (TextView)findViewById(R.id.acc_y);
         TextView acc_z = (TextView)findViewById(R.id.acc_z);
@@ -596,7 +600,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         TextView theta4 = (TextView)findViewById(R.id.theta4);
         theta4.setText(String.format("%6.2f", betaBuffer[3]));
     }
-
+*/
     //--------------------------------------
     // File I/O
 
@@ -776,6 +780,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             activityRef.get().receiveMuseArtifactPacket(p, muse);
         }
     }
+
 }
 
 
