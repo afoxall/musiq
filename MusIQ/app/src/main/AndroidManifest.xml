@@ -14,8 +14,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -32,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".SessionHistory"
             android:label="@string/title_activity_session_history" />
@@ -39,6 +40,16 @@
             android:name=".LiveSessionActivity"
             android:label="@string/title_activity_live_session"></activity>
         <activity android:name=".NewSessionActivity"></activity>
+=======
+
+        <activity android:name=".NewSessionActivity"
+            android:label="NewSessionActivity"></activity>
+
+        <activity
+            android:name=".LiveSessionActivity"
+            android:label="@string/title_activity_live_session"></activity>
+
+>>>>>>> f43ec5019e8ab620ddb71e3d86d296ee38495b29
     </application>
 
 </manifest>

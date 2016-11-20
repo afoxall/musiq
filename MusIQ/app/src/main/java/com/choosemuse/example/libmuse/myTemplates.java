@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OptionalDataException;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileReader;
@@ -20,24 +21,31 @@ import android.content.Context;
 
 public class myTemplates {
 
-    static ArrayList<WorkSessionTemplate> getTemplates(Context ctx) throws FileNotFoundException, IOException{
+    static ArrayList<WorkSessionTemplate> getTemplates(Context ctx) throws IOException{
         ArrayList<WorkSessionTemplate> templates = new ArrayList<WorkSessionTemplate>();
         File dir = ctx.getFilesDir(); // get app directory
 
-        String path = dir.getAbsolutePath() + "session_templates.ser"; // get path of templates file
+        String path = dir.getName() + "/session_templates.ser"; // get path of templates file
 
 
         String line;
-        try{
-            FileInputStream fileIn = new FileInputStream("/tmp/employee.ser");
-            ObjectInputStream in = new ObjectInputStream(fileIn);
-            while(in.available() > 0) {
-                templates.add((WorkSessionTemplate) in.readObject());
-            }
-        }catch(ClassNotFoundException e){
-            e.printStackTrace();
-        }
 
+            FileInputStream fileIn = ctx.openFileInput("session_templates.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+
+            try {
+                while (true) {
+                    templates.add((WorkSessionTemplate) in.readObject());
+                }
+            } catch (OptionalDataException e) {
+                if (!e.eof) throw e;
+            } catch(FileNotFoundException e) {
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }finally {
+                in.close();
+            }
         return templates;
     }
 

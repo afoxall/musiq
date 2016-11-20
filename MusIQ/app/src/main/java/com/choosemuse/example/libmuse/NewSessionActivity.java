@@ -68,19 +68,20 @@ public class NewSessionActivity extends Activity{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 //return to front page
                 Intent i = new Intent(NewSessionActivity.this, MainActivity.class );
                 startActivity(i);
             }
         });
     }
-    // Add session template obj
+
+
     static void addSessionTemplate(Context ctx, String n, int work, int rest, int num) throws IOException {
 
         WorkSessionTemplate workSes = new WorkSessionTemplate(n,work,rest,num);
         File dir = ctx.getFilesDir(); // get app directory
         String path = dir.getAbsolutePath() + "session_templates.ser";
+
         FileOutputStream stream = new FileOutputStream(path, false);
         ObjectOutputStream objStream = new ObjectOutputStream(stream);
         objStream.writeObject(workSes);
