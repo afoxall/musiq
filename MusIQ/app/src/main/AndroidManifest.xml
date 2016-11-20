@@ -32,16 +32,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity
             android:name=".SessionHistory"
             android:label="@string/title_activity_session_history" />
         <activity
             android:name=".LiveSessionActivity"
             android:label="@string/title_activity_live_session"></activity>
-=======
         <activity android:name=".NewSessionActivity"></activity>
->>>>>>> fa8e81a49aece2635e6bd3aaa9cc50511634a3f3
     </application>
 
 </manifest>
