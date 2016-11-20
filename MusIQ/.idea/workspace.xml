@@ -66,10 +66,12 @@
       <file leaf-file-name="LiveSessionActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/LiveSessionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4505#4506#0" expanded="true" />
+                <element signature="e#4565#4566#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +83,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-17">
               <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding />
             </state>
@@ -117,7 +119,7 @@
       <file leaf-file-name="WorkSession.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/WorkSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
+            <state relative-caret-position="680">
               <caret line="71" column="26" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="26" />
               <folding />
             </state>
@@ -2258,17 +2260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_live_session.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_session.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -2314,18 +2305,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/WorkSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
+        <state relative-caret-position="680">
           <caret line="71" column="26" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_live_session.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/LiveSessionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4565#4566#0" expanded="true" />
           </folding>
         </state>
       </provider>

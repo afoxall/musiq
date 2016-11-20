@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.Button;
 
 import com.choosemuse.libmuse.Muse;
 import com.choosemuse.libmuse.MuseArtifactPacket;
@@ -93,7 +94,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
 
     private WorkSession liveSession;
-    private progressPercent
+    private int progressPercent;
 
     @Override
     protected void onDestroy() {
@@ -122,14 +123,19 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         WorkSessionTemplate template = getIntent().getSerializableExtra(sessionId);
         setContentView(R.layout.activity_live_session);
         liveSession = new WorkSession (template); // create a worksession object given the template from the first activity
+        Button Start =  findViewById(R.id.startButton);
+        Start.setOnClickListener(this);
 
+    }
 
+    public void onClick(View v){
+        liveSession.start();     // start the session
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        liveSession.start();     // start the session
+        
     }
 
     @Override
