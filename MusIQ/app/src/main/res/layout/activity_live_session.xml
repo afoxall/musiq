@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.choosemuse.example.libmuse.LiveSessionActivity"
     android:weightSum="1"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#437983">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -19,12 +19,14 @@
         android:layout_height="67dp">
 
         <TextView
-            android:text="Working (active) time:"
+            android:text="Work (active) time:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="18sp"
-            android:id="@+id/WorktimeLabel" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
+        android:id="@+id/WorktimeLabel" />
 
         <TextView
             android:text="0 mins"
@@ -33,7 +35,9 @@
             android:id="@+id/worktimeamount"
             android:layout_weight="0.05"
             android:textAlignment="textEnd"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
@@ -48,7 +52,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/breaktimelabel"
             android:layout_weight="0.06"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:text="0 mins"
@@ -56,7 +62,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/resttimeamount"
             android:layout_weight="0.18"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
@@ -72,7 +80,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/intervalLabel"
             android:layout_weight="1"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:text="0"
@@ -80,25 +90,44 @@
             android:layout_height="wrap_content"
             android:id="@+id/intervalamount"
             android:layout_weight="1.54"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
-    <TextView
-        android:text="Your Productivity:"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ProgressLabel"
-        android:layout_weight="0.25"
-        android:textAlignment="textStart"
-        android:textSize="18sp" />
+        android:layout_height="42dp">
+
+        <TextView
+            android:text="Your Productivity:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ProgressLabel"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="0"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/productivity"
+            android:textSize="20sp"
+            android:textColor="#012C34"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
 
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/seekBar2"
         android:layout_weight="0.34"
-        android:progressBackgroundTint="@android:color/holo_green_dark"
+        android:progressBackgroundTint="#6A959D"
         style="@android:style/Widget.Material.SeekBar" />
 
     <RelativeLayout
@@ -112,7 +141,9 @@
             android:layout_alignParentTop="true"
             android:id="@+id/lessFocusedLabel"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#012C34"/>
+
 
         <TextView
             android:text="More Focused"
@@ -121,7 +152,8 @@
             android:layout_alignBottom="@+id/lessFocusedLabel"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/moreFocusedLabel" />
+            android:id="@+id/moreFocusedLabel"
+            android:textColor="#012C34"/>
     </RelativeLayout>
 
     <Button
@@ -131,109 +163,9 @@
         android:id="@+id/startButton"
         android:layout_weight="0.08"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:background="@android:color/holo_green_dark"
-        android:textSize="24sp"
-        android:textColor="@android:color/background_light" />
+        android:background="@drawable/roundbutton"
+        android:textColor="#6A959D"
+        android:textSize="28sp"
+        android:textStyle="normal|bold" />
 
 </LinearLayout>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_live_session"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.choosemuse.example.libmuse.LiveSessionActivity"
-
-    android:weightSum="1"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="67dp">
-
-        <TextView
-            android:text="Working (active) time:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:id="@+id/WorktimeLabel" />
-
-        <TextView
-            android:text="0 mins"
-            android:layout_width="171dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/worktimeamount"
-            android:layout_weight="0.05"
-            android:textAlignment="textEnd"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="82dp">
-
-        <TextView
-            android:text="Break (rest) time:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/breaktimelabel"
-            android:layout_weight="0.06"
-            android:textSize="18sp" />
-
-        <TextView
-            android:text="0 mins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/resttimeamount"
-            android:layout_weight="0.18"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="106dp"
-        android:layout_weight="0.91">
-
-        <TextView
-            android:text="Intervals:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/intervalLabel"
-            android:layout_weight="1"
-            android:textSize="18sp" />
-
-        <TextView
-            android:text="0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/intervalamount"
-            android:layout_weight="1.54"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <Button
-        android:text="START"
-        android:layout_width="349dp"
-        android:layout_height="81dp"
-        android:id="@+id/startButton"
-        android:layout_weight="0.08"
-        style="@android:style/Widget.DeviceDefault.Button"
-        android:background="@android:color/holo_green_dark"
-        android:textSize="24sp"
-        android:textColor="@android:color/background_light" />
-
-</LinearLayout>
-
-
->>>>>>> f43ec5019e8ab620ddb71e3d86d296ee38495b29

@@ -73,7 +73,7 @@ public class WorkSession {
         roundsLeft = template.getNumIntervals();
 
     }
-    private double getFocus(){
+    public double getFocus(){
         int numPoints = data.size();
         double a = 0, b = 0, g = 0;
 
