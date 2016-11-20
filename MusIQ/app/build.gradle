@@ -22,7 +22,20 @@ android {
     }
 }
 
+repositories {
+    mavenCentral ()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     compile 'com.android.support:support-v4:23.1.1'
     compile files('libs/libmuse_android.jar')
+
+    // This library handles authentication and authorization
+    compile 'com.spotify.sdk:spotify-auth-1.0.0-beta13@aar'
+
+    // This library handles music playback
+    compile 'com.spotify.sdk:spotify-player-1.0.0-beta13@aar'
 }
