@@ -2,9 +2,11 @@ package com.choosemuse.example.libmuse;
 
 import java.io.FileOutputStream;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
-
+import java.text.SimpleDateFormat;
 import android.content.Context;
 
 import com.choosemuse.libmuse.Accelerometer;
@@ -45,10 +47,24 @@ public class WorkSession {
 
     private final double[] accelBuffer = new double[3];
     private boolean accelStale;
-
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd:HH-mm-ss");
     public WorkSession(WorkSessionTemplate t) {
         template = t;
         startTime = new Date();
+    }
+
+    public WorkSession(String t, String start, ArrayList<DataPoint> d, Context ctx) throws IOException{
+
+
+
+        template = myTemplates.getTemplate(t, ctx);
+        try {
+            startTime = sdf.parse(start);
+        }catch(ParseException e){
+            System.out.println(e);
+        }
+        data = d;
+
     }
 
     public void setBuffers(final MuseDataPacket p) {
@@ -89,8 +105,11 @@ public class WorkSession {
         }
     }
     public void write(Context ctx) {
-        String filename = startTime.toString() + ".csv";
-        String string = "sessions/"+template.getName() + "\n";
+
+        String dateStr = sdf.format(startTime);
+        String filename = dateStr + ".csv";
+
+        String string = "saved_sessions/"+template.getName() + "\n";
         for (DataPoint d : data) {
             string = string + d.toString();
         }
