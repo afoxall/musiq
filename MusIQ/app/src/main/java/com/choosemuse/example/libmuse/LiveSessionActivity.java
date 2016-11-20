@@ -1,11 +1,19 @@
 package com.choosemuse.example.libmuse;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.View;
 
 import com.choosemuse.libmuse.Muse;
+import com.choosemuse.libmuse.MuseArtifactPacket;
+import com.choosemuse.libmuse.MuseConnectionListener;
+import com.choosemuse.libmuse.MuseConnectionPacket;
+import com.choosemuse.libmuse.MuseDataListener;
+import com.choosemuse.libmuse.MuseDataPacket;
 import com.choosemuse.libmuse.MuseManagerAndroid;
+
+import java.lang.ref.WeakReference;
 
 /** Ameris Rudland
  * musIQ
@@ -19,7 +27,7 @@ import com.choosemuse.libmuse.MuseManagerAndroid;
  *  - save data from the session
  */
 
-public class LiveSessionActivity extends Activity implements View.OnClickListener{
+public class LiveSessionActivity extends Activity implements View.OnClickListener {
     /**
      * Tag used for logging purposes.
      */
@@ -46,7 +54,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
      * Note that ConnectionListener is an inner class at the bottom of this file
      * that extends MuseConnectionListener.
      */
-    private MainActivity.ConnectionListener connectionListener;
+    private LiveSessionActivity.ConnectionListener connectionListener;
 
     /**
      * The DataListener is how you will receive EEG (and other) data from the
@@ -55,7 +63,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
      * Note that DataListener is an inner class at the bottom of this file
      * that extends MuseDataListener.
      */
-    private MainActivity.DataListener dataListener;
+    private LiveSessionActivity.DataListener dataListener;
 
     /**
      * Data comes in from the headband at a very fast rate; 220Hz, 256Hz or 500Hz,
@@ -100,7 +108,13 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        WorkSessionTemplate template = getIntent().getSerializableExtra(sessionId);
+        setContentView(R.layout.activity_live_session);
+        WorkSession newsession = new WorkSession (template);
+
     }
 
     @Override
@@ -111,5 +125,36 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    class ConnectionListener extends MuseConnectionListener {
+        final WeakReference<MainActivity> activityRef;
+
+        ConnectionListener(final WeakReference<MainActivity> activityRef) {
+            this.activityRef = activityRef;
+        }
+
+        @Override
+        public void receiveMuseConnectionPacket(final MuseConnectionPacket p, final Muse muse) {
+            activityRef.get().receiveMuseConnectionPacket(p, muse);
+        }
+    }
+
+    class DataListener extends MuseDataListener {
+        final WeakReference<MainActivity> activityRef;
+
+        DataListener(final WeakReference<MainActivity> activityRef) {
+            this.activityRef = activityRef;
+        }
+
+        @Override
+        public void receiveMuseDataPacket(final MuseDataPacket p, final Muse muse) {
+            activityRef.get().receiveMuseDataPacket(p, muse);
+        }
+
+        @Override
+        public void receiveMuseArtifactPacket(final MuseArtifactPacket p, final Muse muse) {
+            activityRef.get().receiveMuseArtifactPacket(p, muse);
+        }
     }
 }
