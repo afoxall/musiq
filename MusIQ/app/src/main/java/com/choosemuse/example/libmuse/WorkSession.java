@@ -1,14 +1,13 @@
 package com.choosemuse.example.libmuse;
 
 import java.io.FileOutputStream;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import android.content.Context;
-
+import android.app.AlertDialog;
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.Eeg;
 import com.choosemuse.libmuse.MuseDataPacket;
@@ -19,6 +18,9 @@ public class WorkSession {
     private WorkSessionTemplate template;
     private Date startTime;
     private double timeLeft;
+    private double timeFocused;
+    private Date endTime;
+    private int roundsLeft;
     private ArrayList<DataPoint> data;
     boolean working;
 
@@ -51,11 +53,10 @@ public class WorkSession {
     public WorkSession(WorkSessionTemplate t) {
         template = t;
         startTime = new Date();
+        roundsLeft = t.getNumIntervals();
     }
 
     public WorkSession(String t, String start, ArrayList<DataPoint> d, Context ctx) throws IOException{
-
-
 
         template = myTemplates.getTemplate(t, ctx);
         try {
@@ -64,6 +65,7 @@ public class WorkSession {
             System.out.println(e);
         }
         data = d;
+        roundsLeft = template.getNumIntervals();
 
     }
 
@@ -128,19 +130,35 @@ public class WorkSession {
         working = true;
     }
 
-    public void update() {
+    public void update(Context ctx) {
         DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(thetaBuffer, 4));
         data.add(p);
 
-        if(working){
-            if(p.isFocused()){
-                timeLeft -= 1/60; //because refresh is currently 60hz, so change when that changes
-            }
+        if(p.isFocused()){
+            timeFocused += 1/60; //because refresh is currently 60hz, so change when that changes
         }
+
+        timeLeft -= 1/60;
+
+
         if(timeLeft <= 0){
             //change music, tell user they are on a break
-            working = false;
-            timeLeft = template.getRest();
+            if(working) {
+                //change music to relaxing
+                working = false;
+                timeLeft = template.getRest();
+                roundsLeft--;
+            }
+            else{
+                //change music to focus
+                working = true;
+                timeLeft = template.getWork();
+            }
+        }
+        if(roundsLeft < 1){
+            endTime = new Date();
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ctx);
+            alertDialogBuilder.setMessage("Your session is complete! Review your results then go back to the main page to start another.");
         }
     }
 
