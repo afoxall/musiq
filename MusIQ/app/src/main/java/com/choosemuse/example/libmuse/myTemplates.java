@@ -43,8 +43,7 @@ public class myTemplates {
 
             }catch(Exception e){
                 e.printStackTrace();
-            }finally
-         {
+            }finally {
                 in.close();
             }
         return templates;

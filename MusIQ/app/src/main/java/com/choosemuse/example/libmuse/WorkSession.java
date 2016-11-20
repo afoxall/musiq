@@ -16,6 +16,7 @@ import com.choosemuse.libmuse.MuseDataPacket;
 
 
 public class WorkSession {
+    public static final int Herz = 10;
 
     private WorkSessionTemplate template;
     private Date startTime;
@@ -139,10 +140,10 @@ public class WorkSession {
         data.add(p);
 
         if(p.isFocused()){
-            timeFocused += 1/60; //because refresh is currently 60hz, so change when that changes
+            timeFocused += 1/Herz; //because refresh is currently 60hz, so change when that changes
         }
 
-        timeLeft -= 1/60;
+        timeLeft -= 1/Herz;
 
 
         if(timeLeft <= 0){

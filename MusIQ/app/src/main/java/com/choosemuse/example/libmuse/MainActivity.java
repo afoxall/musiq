@@ -151,12 +151,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
         } else {
             Button b = (Button)v;
             String sessionId = b.getText().toString();
+            WorkSessionTemplate template;
+            try {
+                template = myTemplates.getTemplate(sessionId, this);
+
+            }catch(IOException e){
+                return;
+            }
+
             Intent intent = new Intent(getApplicationContext(), LiveSessionActivity.class);
-            intent.putExtra("session_id_template", sessionId);
+            intent.putExtra("session_id_template", template);
             startActivity(intent);
 
         }
     }
+
 
 
     //--------------------------------------
