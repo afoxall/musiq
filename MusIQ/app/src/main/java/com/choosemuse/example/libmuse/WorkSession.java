@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import android.content.Context;
 import android.app.AlertDialog;
+import android.media.MediaPlayer;
+
 import com.choosemuse.libmuse.Accelerometer;
 import com.choosemuse.libmuse.Eeg;
 import com.choosemuse.libmuse.MuseDataPacket;
@@ -22,6 +24,7 @@ public class WorkSession {
     private Date endTime;
     private int roundsLeft;
     private ArrayList<DataPoint> data;
+    private MediaPlayer mp;
     boolean working;
 
 
@@ -145,12 +148,18 @@ public class WorkSession {
             //change music, tell user they are on a break
             if(working) {
                 //change music to relaxing
+                stopPlaying();
+                mp = MediaPlayer.create(ctx, R.raw.dance);
+                mp.start();
                 working = false;
                 timeLeft = template.getRest();
                 roundsLeft--;
             }
             else{
                 //change music to focus
+                stopPlaying();
+                mp = MediaPlayer.create(ctx, R.raw.study);
+                mp.start();
                 working = true;
                 timeLeft = template.getWork();
             }
@@ -159,6 +168,14 @@ public class WorkSession {
             endTime = new Date();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ctx);
             alertDialogBuilder.setMessage("Your session is complete! Review your results then go back to the main page to start another.");
+        }
+    }
+
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
         }
     }
 
