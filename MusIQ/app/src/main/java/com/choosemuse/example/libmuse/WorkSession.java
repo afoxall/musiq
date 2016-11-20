@@ -73,6 +73,27 @@ public class WorkSession {
         roundsLeft = template.getNumIntervals();
 
     }
+    private double getFocus(){
+        int numPoints = data.size();
+        double a = 0, b = 0, g = 0;
+
+        for(int i = numPoints - 1; i > numPoints - 7; i++){
+            a += data.get(i).alpha;
+            b += data.get(i).beta;
+            g += data.get(i).gamma;
+        }
+
+        a /= 6;
+        g /= 6;
+        b /= 6;
+
+        double a_factor = -1;
+        double b_factor = 1;
+        double g_factor = 1;
+        double bias = -0.8;
+        return a*a_factor + b*b_factor + g*g_factor + bias;
+
+    }
 
     public void setBuffers(final MuseDataPacket p) {
         // valuesSize returns the number of data values contained in the packet.
@@ -139,7 +160,7 @@ public class WorkSession {
         DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(gammaBuffer, 4));
         data.add(p);
 
-        if(p.isFocused()){
+        if(getFocus() < 0){
             timeFocused += 1/Herz; //because refresh is currently 60hz, so change when that changes
         }
 

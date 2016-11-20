@@ -122,7 +122,10 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-
+        if (v.getId() == R.id.startButton) {
+            liveSession.start();
+            handler.post(tickUi);
+        }
     }
 
     @Override
@@ -157,18 +160,16 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         manager.setMuseListener(new MuseL(weakActivity));
 
         initUI();
-        handler.post(tickUi);
 
         List<Muse> availableMuses = manager.getMuses();
-        Spinner musesSpinner = (Spinner) findViewById(R.id.muses_spinner);
 
         // Check that we actually have something to connect to.
-        if (availableMuses.size() < 1 || musesSpinner.getAdapter().getCount() < 1) {
+        if (availableMuses.size() < 1 ) {
             Log.w(TAG, "There is nothing to connect to");
         } else {
 
             // Cache the Muse that the user has selected.
-            muse = availableMuses.get(musesSpinner.getSelectedItemPosition());
+            muse = availableMuses.get(0);
             // Unregister all prior listeners and register our data listener to
             // receive the MuseDataPacketTypes we are interested in.  If you do
             // not register a listener for a particular data type, you will not
@@ -191,7 +192,15 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     }
 
     private void initUI() {
-    //TODO
+        TextView WorktimeLabel = (TextView)findViewById(R.id.WorktimeLabel);
+        TextView WorktimeAmount = (TextView)findViewById(R.id.worktimeamount);
+        TextView breaktimelabel = (TextView)findViewById(R.id.breaktimelabel);
+        TextView resttimeamount = (TextView)findViewById(R.id.resttimeamount);
+        TextView intervalLabel = (TextView)findViewById(R.id.intervalLabel);
+        TextView intervalamount = (TextView)findViewById(R.id.intervalamount);
+        Button startButton = (Button)findViewById(R.id.startButton);
+
+
     }
 
 
@@ -219,7 +228,6 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
             if (liveSession.alphaStale || liveSession.betaStale || liveSession.gammaStale) {
                 updateScreen();
             }
-
             handler.postDelayed(tickUi, 1000 / WorkSession.Herz);
         }
     };
@@ -267,29 +275,6 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         final String status = p.getPreviousConnectionState() + " -> " + current;
         Log.i(TAG, status);
 
-        // Update the UI with the change in connection state.
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-
-                //final TextView statusText = (TextView) findViewById(R.id.con_status);
-                //statusText.setText(status);
-
-                final MuseVersion museVersion = muse.getMuseVersion();
-                final TextView museVersionText = (TextView) findViewById(R.id.version);
-                // If we haven't yet connected to the headband, the version information
-                // will be null.  You have to connect to the headband before either the
-                // MuseVersion or MuseConfiguration information is known.
-                if (museVersion != null) {
-                    final String version = museVersion.getFirmwareType() + " - "
-                            + museVersion.getFirmwareVersion() + " - "
-                            + museVersion.getProtocolVersion();
-                    museVersionText.setText(version);
-                } else {
-                    museVersionText.setText(R.string.undefined);
-                }
-            }
-        });
 
         if (current == ConnectionState.DISCONNECTED) {
             Log.i(TAG, "Muse disconnected:" + muse.getName());

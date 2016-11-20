@@ -148,7 +148,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.addsessionbtn) {
             Intent intent = new Intent(getApplicationContext(), NewSessionActivity.class);
             startActivity(intent);
-        } else {
+        }else {
             Button b = (Button)v;
             String sessionId = b.getText().toString();
             WorkSessionTemplate template;
@@ -165,7 +165,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         }
     }
-
 
 
     //--------------------------------------
@@ -243,6 +242,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Button fourthSession = (Button) findViewById(R.id.fourthsessionbtn);
         Button fifthSession = (Button) findViewById(R.id.fifthsessionbtn);
         Button addSession = (Button) findViewById(R.id.addsessionbtn);
+        addSession.setOnClickListener(this);
 
         ArrayList<Button> buttonSessions = new ArrayList<Button>();
         buttonSessions.add(firstSession);
@@ -251,7 +251,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         buttonSessions.add(fourthSession);
         buttonSessions.add(fifthSession);
 
-        
+
         for (int i = 0; i < buttonSessions.size(); i++) {
             buttonSessions.get(i).setVisibility(View.INVISIBLE);
         }
@@ -262,6 +262,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             button.setVisibility(View.VISIBLE);
             button.setText(templateName);
             button.setOnClickListener(this);
+        }
+        if(templateList.size()>=5){
+            addSession.setVisibility(View.INVISIBLE);
+
         }
     }
 
