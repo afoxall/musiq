@@ -1,5 +1,6 @@
 package com.choosemuse.example.libmuse;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -22,7 +23,7 @@ import java.lang.ref.WeakReference;
  *
  * LiveSessionActivity occurs when a new session is started. It must
  *  - read incoming muse data
- *  - display data in a pretty graph form
+ *  - display data in a pretty graph form - lol maybe not
  *  - change music depending on time/mood in the session
  *  - save data from the session
  */
@@ -91,6 +92,9 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     private boolean accelStale;
 
 
+    private WorkSession liveSession;
+    private progressPercent
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -110,17 +114,22 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        // We need to set the context on MuseManagerAndroid before we can do anything.
+        // This must come before other LibMuse API calls as it also loads the library.
+        manager = MuseManagerAndroid.getInstance();
+        manager.setContext(this);
         Intent intent = getIntent();
         WorkSessionTemplate template = getIntent().getSerializableExtra(sessionId);
         setContentView(R.layout.activity_live_session);
-        WorkSession liveSession = new WorkSession (template); // create a worksession object given the template from the first activity
-        liveSession.start();     // start the session
+        liveSession = new WorkSession (template); // create a worksession object given the template from the first activity
+
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        liveSession.start();     // start the session
     }
 
     @Override
@@ -151,7 +160,8 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         @Override
         public void receiveMuseDataPacket(final MuseDataPacket p, final Muse muse) {
             activityRef.get().receiveMuseDataPacket(p, muse);
-            //liveSession.setDataBuffers();
+            liveSession.setDataBuffers();
+            liveSession.update(manager.getContext());
         }
 
         @Override

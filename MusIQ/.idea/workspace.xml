@@ -66,8 +66,8 @@
       <file leaf-file-name="LiveSessionActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/LiveSessionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="153" column="14" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="14" />
+            <state relative-caret-position="357">
+              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,7 +117,7 @@
       <file leaf-file-name="WorkSession.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/WorkSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-887">
+            <state relative-caret-position="497">
               <caret line="71" column="26" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="26" />
               <folding />
             </state>
@@ -2258,27 +2258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="258" column="83" selection-start-line="258" selection-start-column="83" selection-end-line="258" selection-end-column="83" />
-          <folding>
-            <element signature="e#13180#13608#0" expanded="true" />
-            <element signature="e#13607#13608#0" expanded="true" />
-            <element signature="e#15519#16575#0" expanded="true" />
-            <element signature="e#16574#16575#0" expanded="true" />
-            <element signature="e#21717#22427#0" expanded="true" />
-            <element signature="e#22426#22427#0" expanded="true" />
-            <element signature="e#25347#26048#0" expanded="true" />
-            <element signature="e#26047#26048#0" expanded="true" />
-            <element signature="e#26399#26567#0" expanded="true" />
-            <element signature="e#26566#26567#0" expanded="true" />
-            <element signature="e#26784#27342#0" expanded="true" />
-            <element signature="e#27341#27342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_live_session.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2312,9 +2291,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="258" column="83" selection-start-line="258" selection-start-column="83" selection-end-line="258" selection-end-column="83" />
+          <folding>
+            <element signature="e#13180#13608#0" expanded="true" />
+            <element signature="e#13607#13608#0" expanded="true" />
+            <element signature="e#15519#16575#0" expanded="true" />
+            <element signature="e#16574#16575#0" expanded="true" />
+            <element signature="e#21717#22427#0" expanded="true" />
+            <element signature="e#22426#22427#0" expanded="true" />
+            <element signature="e#25347#26048#0" expanded="true" />
+            <element signature="e#26047#26048#0" expanded="true" />
+            <element signature="e#26399#26567#0" expanded="true" />
+            <element signature="e#26566#26567#0" expanded="true" />
+            <element signature="e#26784#27342#0" expanded="true" />
+            <element signature="e#27341#27342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/WorkSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-887">
+        <state relative-caret-position="497">
           <caret line="71" column="26" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="26" />
           <folding />
         </state>
@@ -2322,8 +2322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/choosemuse/example/libmuse/LiveSessionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="153" column="14" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="14" />
+        <state relative-caret-position="357">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
