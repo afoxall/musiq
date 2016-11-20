@@ -1,10 +1,11 @@
-package com.choosemuse.example.libmuse;
 
+package com.choosemuse.example.libmuse;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -15,12 +16,14 @@ import android.widget.TextView;
 
 import com.choosemuse.libmuse.ConnectionState;
 import com.choosemuse.libmuse.Eeg;
+
 import com.choosemuse.libmuse.Muse;
 import com.choosemuse.libmuse.MuseArtifactPacket;
 import com.choosemuse.libmuse.MuseConnectionListener;
 import com.choosemuse.libmuse.MuseConnectionPacket;
 import com.choosemuse.libmuse.MuseDataListener;
 import com.choosemuse.libmuse.MuseDataPacket;
+
 import com.choosemuse.libmuse.MuseDataPacketType;
 import com.choosemuse.libmuse.MuseListener;
 import com.choosemuse.libmuse.MuseManagerAndroid;
@@ -37,7 +40,12 @@ import java.util.List;
  *
  * LiveSessionActivity occurs when a new session is started. It must
  *  - read incoming muse data
-*/
+
+ *  - display data in a pretty graph form - lol maybe not
+ *  - change music depending on time/mood in the session
+ *  - save data from the session
+ */
+
 public class LiveSessionActivity extends Activity implements View.OnClickListener {
     /**
      * Tag used for logging purposes.
@@ -103,9 +111,9 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
 
     private final Handler handler = new Handler();
 
+
     private WorkSession liveSession;
     private int progressPercent;
-
 
     @Override
     protected void onDestroy() {
@@ -113,7 +121,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View view){
+    public void onClick(View v) {
 
     }
 
@@ -136,6 +144,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         manager = MuseManagerAndroid.getInstance();
         manager.setContext(this);
         Intent intent = getIntent();
+
         WeakReference<LiveSessionActivity> weakActivity =
                 new WeakReference<LiveSessionActivity>(this);
         // Register a listener to receive connection state changes.
@@ -223,8 +232,6 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     @Override
     protected void onStart() {
         super.onStart();
-
-        liveSession.start();     // start the session
     }
 
     @Override
@@ -232,11 +239,11 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         super.onResume();
     }
 
-
     class ConnectionListener extends MuseConnectionListener {
         final WeakReference<LiveSessionActivity> activityRef;
 
         ConnectionListener(final WeakReference<LiveSessionActivity> activityRef) {
+
             this.activityRef = activityRef;
         }
 
@@ -334,6 +341,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         final WeakReference<LiveSessionActivity> activityRef;
 
         DataListener(final WeakReference<LiveSessionActivity> activityRef) {
+
             this.activityRef = activityRef;
         }
 
