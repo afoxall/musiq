@@ -113,7 +113,8 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         Intent intent = getIntent();
         WorkSessionTemplate template = getIntent().getSerializableExtra(sessionId);
         setContentView(R.layout.activity_live_session);
-        WorkSession newsession = new WorkSession (template);
+        WorkSession liveSession = new WorkSession (template); // create a worksession object given the template from the first activity
+        liveSession.start();     // start the session
 
     }
 
@@ -150,6 +151,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
         @Override
         public void receiveMuseDataPacket(final MuseDataPacket p, final Muse muse) {
             activityRef.get().receiveMuseDataPacket(p, muse);
+            //liveSession.setDataBuffers();
         }
 
         @Override
