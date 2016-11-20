@@ -26,6 +26,7 @@ public class WorkSession {
     private ArrayList<DataPoint> data;
     private MediaPlayer mp;
     boolean working;
+    Context context;
 
 
     /**
@@ -60,7 +61,7 @@ public class WorkSession {
     }
 
     public WorkSession(String t, String start, ArrayList<DataPoint> d, Context ctx) throws IOException{
-
+        context = ctx;
         template = myTemplates.getTemplate(t, ctx);
         try {
             startTime = sdf.parse(start);
@@ -133,7 +134,7 @@ public class WorkSession {
         working = true;
     }
 
-    public void update(Context ctx) {
+    public void update() {
         DataPoint p = new DataPoint(max(alphaBuffer, 4), max(betaBuffer, 4), max(gammaBuffer, 4));
         data.add(p);
 
@@ -149,7 +150,7 @@ public class WorkSession {
             if(working) {
                 //change music to relaxing
                 stopPlaying();
-                mp = MediaPlayer.create(ctx, R.raw.dance);
+                mp = MediaPlayer.create(context, R.raw.dance);
                 mp.start();
                 working = false;
                 timeLeft = template.getRest();
@@ -158,7 +159,7 @@ public class WorkSession {
             else{
                 //change music to focus
                 stopPlaying();
-                mp = MediaPlayer.create(ctx, R.raw.study);
+                mp = MediaPlayer.create(context, R.raw.study);
                 mp.start();
                 working = true;
                 timeLeft = template.getWork();
@@ -166,7 +167,7 @@ public class WorkSession {
         }
         if(roundsLeft < 1){
             endTime = new Date();
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ctx);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
             alertDialogBuilder.setMessage("Your session is complete! Review your results then go back to the main page to start another.");
         }
     }

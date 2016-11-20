@@ -47,4 +47,8 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     protected void onResume() {
         super.onResume();
     }
+    @Override
+    public void onClick(View view) {
+
+    }
 }
