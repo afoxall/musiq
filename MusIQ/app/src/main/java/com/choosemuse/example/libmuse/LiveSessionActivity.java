@@ -135,7 +135,7 @@ public class LiveSessionActivity extends Activity implements View.OnClickListene
     @Override
     protected void onStart() {
         super.onStart();
-        
+
     }
 
     @Override
